@@ -1,0 +1,168 @@
+Circuit: * C:\Users\Alan\Leo\UBA\Circuitos II\Proyecto\etapa_ampli_2Sziklai_mas_tension.asc
+
+Warning: Multiple definitions of model "2sc2412k" Type: BJT
+Warning: Multiple definitions of model "2sa1037ak" Type: BJT
+Warning: Multiple definitions of model "bc817-16" Type: BJT
+Warning: Multiple definitions of model "bc848b" Type: BJT
+Warning: Multiple definitions of model "bc807-16" Type: BJT
+Warning: Multiple definitions of model "bcx17" Type: BJT
+Warning: Multiple definitions of model "bc858b" Type: BJT
+Warning: Multiple definitions of model "2sd1898" Type: BJT
+Warning: Multiple definitions of model "d45h11" Type: BJT
+Warning: Multiple definitions of model "bc856b" Type: BJT
+Warning: Multiple definitions of model "bc556b" Type: BJT
+Warning: Multiple definitions of model "bc846b" Type: BJT
+Warning: Multiple definitions of model "bc546b" Type: BJT
+Warning: Multiple definitions of model "bc327-40" Type: BJT
+Warning: Multiple definitions of model "bc327-25" Type: BJT
+Warning: Multiple definitions of model "bc807-40" Type: BJT
+Warning: Multiple definitions of model "bc807-25" Type: BJT
+Warning: Multiple definitions of model "bc857c" Type: BJT
+Warning: Multiple definitions of model "bc857b" Type: BJT
+Warning: Multiple definitions of model "bc857a" Type: BJT
+Warning: Multiple definitions of model "bc557c" Type: BJT
+Warning: Multiple definitions of model "bc557b" Type: BJT
+Warning: Multiple definitions of model "bc337-40" Type: BJT
+Warning: Multiple definitions of model "bc337-25" Type: BJT
+Warning: Multiple definitions of model "bc817-40" Type: BJT
+Warning: Multiple definitions of model "bc817-25" Type: BJT
+Warning: Multiple definitions of model "bc847c" Type: BJT
+Warning: Multiple definitions of model "bc847b" Type: BJT
+Warning: Multiple definitions of model "bc847a" Type: BJT
+Warning: Multiple definitions of model "bc547c" Type: BJT
+Warning: Multiple definitions of model "bc547b" Type: BJT
+Warning: Multiple definitions of model "2n3019" Type: BJT
+Warning: Multiple definitions of model "bcw68g" Type: BJT
+Warning: Multiple definitions of model "bcw68f" Type: BJT
+Warning: Multiple definitions of model "bcw60d" Type: BJT
+Warning: Multiple definitions of model "bcw60c" Type: BJT
+Warning: Multiple definitions of model "bcw60b" Type: BJT
+Warning: Multiple definitions of model "bcw60a" Type: BJT
+Warning: Multiple definitions of model "2n3055" Type: BJT
+Warning: Multiple definitions of model "2n5771" Type: BJT
+Warning: Multiple definitions of model "2n5769" Type: BJT
+Warning: Multiple definitions of model "2n2369" Type: BJT
+Warning: Multiple definitions of model "2n5401" Type: BJT
+Warning: Multiple definitions of model "2n5550" Type: BJT
+Warning: Multiple definitions of model "2n4403" Type: BJT
+Warning: Multiple definitions of model "2n4401" Type: BJT
+Warning: Multiple definitions of model "2n2905a" Type: BJT
+Warning: Multiple definitions of model "2n2219a" Type: BJT
+Warning: Multiple definitions of model "2n5087" Type: BJT
+Warning: Multiple definitions of model "2n5210" Type: BJT
+Warning: Multiple definitions of model "2n5089" Type: BJT
+Warning: Multiple definitions of model "2n3391a" Type: BJT
+Warning: Multiple definitions of model "2n4126" Type: BJT
+Warning: Multiple definitions of model "2n4124" Type: BJT
+Warning: Multiple definitions of model "ztx1048a" Type: BJT
+Warning: Multiple definitions of model "ztx849" Type: BJT
+Warning: Multiple definitions of model "fzt849" Type: BJT
+Warning: Multiple definitions of model "2n3906" Type: BJT
+Warning: Multiple definitions of model "2n3904" Type: BJT
+Warning: Multiple definitions of model "2n2907" Type: BJT
+Warning: Multiple definitions of model "2n2222" Type: BJT
+WARNING: Node NC_03 is floating.
+
+WARNING: Less than two connections to node NC_01.  This node is used by Q18_CPROTECT.
+WARNING: Less than two connections to node NC_02.  This node is used by Q19_CPROTECT.
+WARNING: Less than two connections to node NC_03.  This node is used by R23.
+WARNING: Less than two connections to node NC_04.  This node is used by R24.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+vernier = 0.5
+Gmin = 2.5711e-006
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+Gmin = 2.5711e-006
+vernier = 0.00195313
+vernier = 0.00260417
+Gmin = 2.55816e-006
+vernier = 0.00347222
+vernier = 0.00462963
+Gmin = 2.5357e-006
+vernier = 0.00617283
+Gmin = 2.50075e-006
+vernier = 0.00823044
+vernier = 0.0109739
+Gmin = 2.44317e-006
+vernier = 0.0146319
+vernier = 0.0195092
+Gmin = 2.35415e-006
+vernier = 0.0260122
+Gmin = 2.22071e-006
+vernier = 0.034683
+vernier = 0.046244
+Gmin = 2.01385e-006
+vernier = 0.0616586
+vernier = 0.0822114
+Gmin = 1.7239e-006
+vernier = 0.109615
+Gmin = 1.35121e-006
+vernier = 0.146154
+vernier = 0.194871
+Gmin = 9.00689e-007
+vernier = 0.259828
+vernier = 0.346438
+Gmin = 4.75464e-007
+vernier = 0.461917
+Gmin = 1.77033e-007
+vernier = 0.615889
+vernier = 0.821185
+Gmin = 3.55228e-008
+vernier = 1
+Gmin = 4.10241e-009
+Gmin = 4.40493e-010
+Gmin = 4.72976e-011
+Gmin = 5.07854e-012
+Gmin = 5.45304e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+N-Period=1
+Fourier components of V(out)
+DC component:-0.0370984
+
+Harmonic	Frequency	 Fourier 	Normalized	 Phase  	Normalized
+ Number 	  [Hz]   	Component	 Component	[degree]	Phase [deg]
+    1   	1.000e+03	4.474e+01	1.000e+00	    0.25°	    0.00°
+    2   	2.000e+03	9.317e-02	2.083e-03	 -111.35°	 -111.59°
+    3   	3.000e+03	4.276e-02	9.557e-04	  143.87°	  143.62°
+    4   	4.000e+03	1.365e-02	3.051e-04	  -15.57°	  -15.82°
+    5   	5.000e+03	8.452e-02	1.889e-03	  -16.85°	  -17.09°
+    6   	6.000e+03	5.064e-02	1.132e-03	   85.91°	   85.66°
+    7   	7.000e+03	3.460e-02	7.734e-04	  -54.67°	  -54.91°
+    8   	8.000e+03	4.680e-02	1.046e-03	  -92.92°	  -93.16°
+    9   	9.000e+03	1.974e-02	4.412e-04	  102.21°	  101.97°
+Total Harmonic Distortion: 0.347560%(0.360446%)
+
+
+
+Date: Fri May 31 12:07:58 2019
+Total elapsed time: 1.515 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 61911
+traniter = 59745
+tranpoints = 22459
+accept = 16113
+rejected = 6346
+matrix size = 105
+fillins = 163
+solver = Normal
+Matrix Compiler1: 18.24 KB object code size  3.2/1.8/[1.0]
+Matrix Compiler2: off  [1.7]/2.3/2.0
+
