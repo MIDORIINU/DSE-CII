@@ -1,4 +1,4 @@
-Circuit: * C:\Users\bakaneko\Facultad\Materias\Circuitos Electrónicos II\TPS\REPO-TPS\REPO\TP_FInal_V2\DSE\Spice (Diego)\amplifier\amplifier_THD_vs_power.asc
+Circuit: * C:\Users\bakaneko\Facultad\Materias\Circuitos Electrónicos II\TPS\REPO-TPS\REPO-DSE\Spice (Diego)\amplifier\amplifier_THD_vs_power.asc
 
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -1809,8 +1809,8 @@ Measurement: vout_max
     42	25.212	0	0.01
 
 
-Date: Sun Nov 24 23:29:58 2019
-Total elapsed time: 1499.478 seconds.
+Date: Sun Dec 08 12:46:59 2019
+Total elapsed time: 1442.070 seconds.
 
 tnom = 27
 temp = 27
@@ -1822,6 +1822,6 @@ accept = 140250
 rejected = 194
 matrix size = 103
 fillins = 180
-Matrix Compiler1: 23.94 KB object code size  13.4/10.9/[7.3]
-Matrix Compiler2: 14.49 KB object code size  6.1/6.5/[6.3]
+Matrix Compiler1: 23.94 KB object code size  15.4/10.8/[7.4]
+Matrix Compiler2: 14.49 KB object code size  6.1/6.7/[6.3]
 

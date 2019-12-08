@@ -9,7 +9,7 @@ THD_vs_freq = dlmread('THD_vs_freq.txt', '\t');
 f_THD_vs_freq = @(y) interp1(THD_vs_freq(:,1), THD_vs_freq(:,2), ...
     y, 'spline');
 
-freq_points=THD_vs_freq(1,1):0.01:THD_vs_freq(length(THD_vs_freq(:,1)),1);
+freq_points=THD_vs_freq(1,1):0.1:THD_vs_freq(length(THD_vs_freq(:,1)),1);
 
 figure1 = figure('WindowState','maximized');
 
@@ -34,7 +34,7 @@ axes1.XAxis.Exponent = 0;
 
 axes1.YAxis.Exponent = 0;
 
-THD_points = 0:0.01:max(THD_vs_freq(:,2));
+%THD_points = 0:0.1:max(THD_vs_freq(:,2));
 
 freq_points_sp=0:500:THD_vs_freq(length(THD_vs_freq(:,1)),1);
 
@@ -44,9 +44,9 @@ xlim(axes1, [0 THD_vs_freq(length(THD_vs_freq(:,1)),1)]);
 set(axes1,'XGrid','on','XMinorTick','on','XTick',...
     freq_points_sp, 'XTickLabel', ...
     cellfun(@num2str,num2cell(freq_points_sp),'uni',false), ...
-    'YGrid','on','YMinorTick','on','YTick',...
-    THD_points, 'YTickLabel', ...
-    cellfun(@num2str,num2cell(THD_points),'uni',false));
+    'YGrid','on','YMinorTick','on');%,'YTick',...
+    %THD_points, 'YTickLabel', ...
+    %cellfun(@num2str,num2cell(THD_points),'uni',false));
     %'XScale', 'log');
 
 plot(axes1, freq_points, f_THD_vs_freq(freq_points),'Color',[1 0 0]);
