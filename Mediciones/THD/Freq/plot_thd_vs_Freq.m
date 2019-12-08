@@ -38,7 +38,7 @@ axes1 = axes('Parent',figure1);
 hold(axes1,'on');
 
 % Create plot
-plot(axes1, freq, THD, 'Color', [0 1 0]);
+plot(axes1, freq, THD,'Marker','hexagram', 'Color', [0 1 0]);
 
 % Create title
 title('THD vs Frecuencia');
@@ -86,7 +86,7 @@ p3 = fliplr(lsqlin(C,THD,-A,b).');
 
 THDp = polyval(p3, freq);
 
-plot(axes1, freq, THDp,'LineStyle','--', 'Color', [0 0 1]);
+plot(axes1, freq, THDp, 'LineStyle','--', 'Color', [0 0 1]);
 
 
 %%

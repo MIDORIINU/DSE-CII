@@ -35,7 +35,7 @@ axes1 = axes('Parent',figure1);
 hold(axes1,'on');
 
 % Create plot
-plot(power, THD, 'Color', [1 0 0]);
+plot(power, THD,'Marker','hexagram', 'Color', [1 0 0]);
 
 % Create title
 title('THD vs Potencia');
@@ -84,7 +84,7 @@ p3 = fliplr(lsqlin(C,THD,-A,b).');
 
 THDp = polyval(p3, power);
 
-plot(axes1, power, THDp,'LineStyle','--', 'Color', [0 0 1]);
+plot(axes1, power, THDp, 'LineStyle','--', 'Color', [0 0 1]);
 
 
 %%
