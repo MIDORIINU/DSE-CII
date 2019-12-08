@@ -55,8 +55,45 @@ axes1.YAxis.Exponent = 0;
 xtickangle(axes1, 75);
 
 
+
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ajustar a una curva monotona.
+
+n_data = length(THD);
+
+degree = 3;
+
+% limit on derivative - in each data point
+b = zeros(n_data, 1);
+
+% coefficient matrix
+C = nan(n_data, degree+1);
+% derivative coefficient matrix
+A = nan(n_data, degree);
+
+% loop over polynomial terms
+for ii  = 1:degree+1
+    C(:,ii) = power.^(ii-1);
+    A(:,ii) = (ii-1)*power.^(ii-2);
+end
+
+
+% Constrained
+p3 = fliplr(lsqlin(C,THD,-A,b).');
+
+THDp = polyval(p3, power);
+
+plot(axes1, power, THDp,'LineStyle','--', 'Color', [0 0 1]);
+
+
+%%
 %%%
-solution_complete_name = ...
+
+
+
+%%%
+graph_complete_name = ...
     fullfile(images_directory, ...
     strjoin({'THD_vs_power', ...
     '.png'}, ''));
@@ -64,7 +101,7 @@ solution_complete_name = ...
 fprintf('Salvando el gráfico en un archivo "PNG"......');
 
 % Salvo el gráfico en un archivo.
-saveas(figure1, solution_complete_name);
+saveas(figure1, graph_complete_name);
 
 % Salvado completo.
 fprintf('Listo\n\n');
