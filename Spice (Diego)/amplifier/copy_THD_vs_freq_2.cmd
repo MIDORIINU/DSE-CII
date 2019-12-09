@@ -1,0 +1,3 @@
+
+DEL amplifier_THD_vs_freq_1k_to_25k.txt
+COPY amplifier_THD_vs_freq.log amplifier_THD_vs_freq_1k_to_25k.txt
