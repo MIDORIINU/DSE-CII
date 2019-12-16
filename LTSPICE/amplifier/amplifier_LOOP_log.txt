@@ -103,8 +103,8 @@ Gmin stepping succeeded in finding the operating point.
 zerogainvalue: v(out)*exp(i*pi)=(-3.93056e-010dB,-93.8786°) at 272299
 
 
-Date: Mon Dec 16 01:25:44 2019
-Total elapsed time: 8.597 seconds.
+Date: Mon Dec 16 06:08:45 2019
+Total elapsed time: 7.883 seconds.
 
 tnom = 27
 temp = 27
@@ -118,5 +118,5 @@ matrix size = 104
 fillins = 192
 solver = Alternate
 Matrix Compiler1:    1041 opcodes
-Matrix Compiler2: off  [5.7]/6.3/6.1
+Matrix Compiler2: 14.84 KB object code size  5.9/6.3/[6.0]
 
