@@ -1,7 +1,7 @@
 %Este archivo no tiene contenido, mas allá de configuraciones y\o definiciones.
 %todo el contenido se encuentra en los archivos secundarios que son importados por este.
 
-\documentclass[twoside,letterpaper]{article}
+\documentclass[twoside,a4paper]{article}
 
 
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -94,6 +94,8 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{bm}
+\usepackage{xcolor}
+\usepackage{soul}
 
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -139,6 +141,8 @@
    {#3#2|_{#4}}%
 }
 
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}
+
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -168,38 +172,37 @@
 %Comandos personalizados
 
 \newcommand{\titulo}{Trabajo práctico final}
-\newcommand{\titulolargo}{Diseño de un amplificador clase G - mediciones}
-\newcommand{\materia}{Circuitos electrónicos II - 66.10}
+\newcommand{\titulolargo}{Diseño y construcción de un amplificador clase G - mediciones}
+\newcommand{\materia}{Circuitos electrónicos II - 66.10 \\ Diseño de circuitos electrónicos - 86.10}
 \newcommand{\fiuba}{Facultad de Ingeniería - UBA}
 \newcommand{\cuatrimestre}{1\textsuperscript{er} c. 2019} %\sptext{do} $2^{do}$
 
 
-\newcommand{\autorA}{\textsc{Neumarkt Fernández} Leonardo}
-\newcommand{\padronA}{97471}
-\newcommand{\mailA}{\weblink{mailto:leoneu928@gmail.com}{leoneu928@gmail.com}}
+\newcommand{\autorB}{\textsc{Neumarkt Fernández} Leonardo}
+\newcommand{\padronB}{97471}
+\newcommand{\mailB}{\weblink{mailto:leoneu928@gmail.com}{leoneu928@gmail.com}}
 
  
-\newcommand{\autorB}{\textsc{Rizzo} Gonzalo Gabriel}
-\newcommand{\padronB}{96772}
-\newcommand{\mailB}{\weblink{mailto:gonzalorizzo95@gmail.com}{gonzalorizzo95@gmail.com}} 
+\newcommand{\autorC}{\textsc{Rizzo} Gonzalo Gabriel}
+\newcommand{\padronC}{96772}
+\newcommand{\mailC}{\weblink{mailto:gonzalorizzo95@gmail.com}{gonzalorizzo95@gmail.com}} 
  
  
  
-\newcommand{\autorC}{\textsc{Luna} Diego}
-\newcommand{\padronC}{75451}
-\newcommand{\mailC}{\weblink{mailto:diegorluna@gmail.com}{diegorluna@gmail.com}} 
+\newcommand{\autorA}{\textsc{Luna} Diego}
+\newcommand{\padronA}{75451}
+\newcommand{\mailA}{\weblink{mailto:diegorluna@gmail.com}{diegorluna@gmail.com}} 
 
 
  
 \newcommand{\docenteA}{Ing. \textsc{Bertuccio} José Alberto}
-\newcommand{\docenteB}{Ing. \textsc{Acquaticci} Fabián}
-\newcommand{\docenteC}{Ing. \textsc{Marchi} Edgardo }
-\newcommand{\docenteD}{Ing. \textsc{Bulacio} Matías}
-\newcommand{\docenteE}{Ing. \textsc{D’Angiolo} Federico}
-\newcommand{\docenteF}{Ing. \textsc{Gamez} Pablo}
+\newcommand{\docenteB}{Ing. \textsc{Marchi} Edgardo }
+\newcommand{\docenteC}{Ing. \textsc{Bulacio} Matías}
+\newcommand{\docenteD}{Ing. \textsc{D’Angiolo} Federico}
+\newcommand{\docenteE}{Ing. \textsc{Gamez} Pablo}
 
 
-\newcommand{\thedate}{07 de Agosto de 2019}
+\newcommand{\thedate}{12 de Diciembre de 2019}
 
 
 \newcommand{\HRule}{\rule{\linewidth}{0.3mm}}
@@ -210,7 +213,7 @@
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\
 %Título,  autor del documento y fecha
 \title{\titulo}
-\author{\autorC}
+\author{\autorB}
 \date{\thedate}
 %\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -451,9 +454,9 @@
 \definecolor{Aluminium5}{rgb}{0.33,0.34,0.32}
 \definecolor{Aluminium6}{rgb}{0.18,0.20,0.21}
 
-\definecolor{EQColor}{rgb}{0.00,0.26,0.36} % {0.80,0.36,0.00}
-\definecolor{FIGColor}{cmyk}{1,0.00,0.00,0.00}
-\definecolor{TABLEColor}{RGB}{70,19,199}
+\definecolor{EQColor}{RGB}{50,205,50}
+\definecolor{FIGColor}{RGB}{255,155,0}
+\definecolor{TABLEColor}{RGB}{00,255,255}
 
 
 
@@ -648,7 +651,7 @@
 %\fancyhf[LOH,REH]{\fiuba}
 %\fancyhf[ROH,LEH]{\titulo}
 
-\fancyhf[LH]{\small{\fiuba}}
+\fancyhf[LH]{\includegraphics[width=3cm]{./img/logo_encabezado_fiuba}}
 \fancyhf[CH]{\small{\materia}}
 \fancyhf[RH]{\titulo} 
 

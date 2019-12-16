@@ -51,7 +51,7 @@ box(axes1,'on');
 set(axes1,'XGrid','on','XMinorTick','on','XTick',...
     (0:1:max(THD_sim(:,1))),...
     'YGrid','on','YMinorTick','on','YTick',...
-    0:0.005:1.1*max(THD_measured(:,2)));
+    0:0.0025:1.1*max(THD_measured(:,2)));
 
 xlim(axes1, [0 42]);
 
@@ -59,7 +59,7 @@ xlabel('Potencia [W]');
 
 ylabel('THD [%]');
 
-ylim(axes1, [0 1.1*max(THD_measured(:,2))]);
+ylim(axes1, [0 1.01*max(THD_measured(:,2))]);
 
 axes1.XAxis.Exponent = 0;
 
@@ -78,12 +78,14 @@ plot(axes1, THD_sim(:,1), THD_sim(:,2), ...
     'Color', [0 1 0]);
 
 % Set the remaining axes properties
-set(axes1,...
-    'YGrid','on','YMinorTick','on','YTick',...
-    0:0.0005:1.5*max(THD_sim(:,2)));
+% set(axes1,...
+%     'YGrid','on','YMinorTick','on','YTick',...
+%     0:0.0005:1.5*max(THD_sim(:,2)));
+set(axes1,'YGrid','on','YMinorTick','on','YTick',...
+    0:0.00025:0.101*max(THD_measured(:,2)));
 
-
-ylim(axes1, [0 1.5*max(THD_sim(:,2))]);
+%ylim(axes1, [0 1.5*max(THD_sim(:,2))]);
+ylim(axes1, [0 0.101*max(THD_measured(:,2))]);
 
 ylabel('THD [%]');
 
