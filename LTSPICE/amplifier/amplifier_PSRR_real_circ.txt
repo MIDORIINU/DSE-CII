@@ -1,0 +1,84 @@
+Circuit: * C:\Users\bakaneko\Facultad\Materias\Circuitos Electrónicos II\TPS\REPO-TPS\REPO-DSE\LTSPICE\amplifier\amplifier_PSRR_real_circ.asc
+
+WARNING: Less than two connections to node VCCH.  This node is used by V3.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+vernier = 0.00195313
+vernier = 0.000976563
+Gmin = 2.05688e-006
+vernier = 0.000488281
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 17.6136%
+Source Step = 19.5076%
+Source Step = 21.4015%
+Source Step = 23.2955%
+Source Step = 25.1894%
+Source Step = 27.0833%
+vernier = 0.09375
+Source Step = 29.9242%
+Source Step = 32.7652%
+Source Step = 35.6061%
+Source Step = 38.447%
+Source Step = 41.2879%
+vernier = 0.140625
+Source Step = 45.4072%
+Source Step = 49.6686%
+Source Step = 53.9299%
+Source Step = 58.1913%
+Source Step = 62.4527%
+vernier = 0.210938
+Source Step = 68.4186%
+Source Step = 74.8106%
+Source Step = 81.2027%
+Source Step = 87.5947%
+Source Step = 93.9867%
+vernier = 0.316406
+Source stepping succeeded in finding the operating point.
+
+
+vcch_mod_rms: RMS(v(vcch_mod) - vcch_mod_mean)=0.177077 FROM 0.5 TO 1
+vcch_mod_mean: AVG(v(vcch_mod))=34.8317 FROM 0.5 TO 1
+vout_filt_rms: RMS(v(out_filt) - vout_filt_mean)=0.000292892 FROM 0.5 TO 1
+psrr: (20*log10(vcch_mod_rms/vout_filt_rms))=55.6291
+vcch_mod_rms_t: RMS(v(vcch_mod))=34.8321 FROM 0.5 TO 1
+vout_filt_mean: AVG(v(out_filt))=-0.000431084 FROM 0.5 TO 1
+
+
+Date: Mon Dec 16 03:36:05 2019
+Total elapsed time: 354.185 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3019269
+traniter = 3016141
+tranpoints = 1505239
+accept = 1504053
+rejected = 1186
+matrix size = 126
+fillins = 216
+solver = Alternate
+Thread vector: 45.4/32.6[2] 32.6/19.0[2] 8.5/6.2[2] 4.8/7.4[1]  2592/500
+Matrix Compiler1: 28.88 KB object code size  24.4/19.1/[18.5]
+Matrix Compiler2: 17.21 KB object code size  10.4/8.9/[7.7]
+

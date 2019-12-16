@@ -1,0 +1,3 @@
+
+DEL amplifier_THD_vs_power.txt
+COPY amplifier_THD_vs_power.log amplifier_THD_vs_power.txt

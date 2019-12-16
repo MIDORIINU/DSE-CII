@@ -1,0 +1,70 @@
+Circuit: * C:\Users\bakaneko\Facultad\Materias\Circuitos Electrónicos II\TPS\REPO-TPS\REPO-DSE\LTSPICE\amplifier\amplifier_POWER_BW.asc
+
+Number of points per decade reduced from 10000 to 5248.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+Gmin = 2.04488e-006
+vernier = 0.0104167
+vernier = 0.0138889
+Gmin = 1.99152e-006
+vernier = 0.0185185
+Gmin = 1.91041e-006
+vernier = 0.0246913
+vernier = 0.0329218
+Gmin = 1.78177e-006
+vernier = 0.0438957
+vernier = 0.0219478
+vernier = 0.0109739
+vernier = 0.00548696
+vernier = 0.00274348
+Gmin = 1.69634e-006
+vernier = 0.00137174
+vernier = 0.00068587
+vernier = 0.000514403
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source stepping succeeded in finding the operating point.
+
+
+bw=97821.3 FROM 22.3365 TO 97843.6
+max_pout: MAX(mag(v(out)*i(rl)/2))=(32.0534dB,0°) FROM 0.01 TO 1e+010
+
+
+Date: Mon Dec 16 01:21:08 2019
+Total elapsed time: 7.837 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 2644
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 103
+fillins = 178
+solver = Alternate
+Matrix Compiler1:    1012 opcodes
+Matrix Compiler2: off  [6.0]/8.7/7.4
+
