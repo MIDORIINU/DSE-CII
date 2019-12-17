@@ -26,11 +26,11 @@ simulation_name = 'amplifier_LP_BW';
 
 simulation_save_name = 'Low_power_BW';
 
-simulation_title = 'Ancho de banda a baja potencia (4.5 W)';
+simulation_title = 'Ancho de banda a baja potencia (5 W)';
 
-simulation_mod_limits = [0 4.725];
+simulation_mod_limits = [0 5.25];
 
-simulation_mod_ticks = (0:0.25:4.725);
+simulation_mod_ticks = (0:0.25:5.25);
 
 simulation_ang_limits = [-1300 0];
 

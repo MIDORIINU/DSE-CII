@@ -58,7 +58,7 @@ box(axes1,'on');
 set(axes1,'XGrid','on','XMinorTick','on','XTick',...
     (0:1:max(THD_sim(:,1))),...
     'YGrid','on','YMinorTick','on','YTick',...
-    0:0.00025:0.101*max(THD_measured(:,2)));
+    0:0.000025:0.101*max(THD_measured(:,2)));
 
 xlim(axes1, [0 max(THD_sim(:,1))]);
 
@@ -66,7 +66,10 @@ xlabel('Potencia [W]');
 
 ylabel('THD [%]');
 
-ylim(axes1, [0 0.101*max(THD_measured(:,2))]);
+% ylim(axes1, [0 0.101*max(THD_measured(:,2))]);
+
+ylim(axes1, [0.00775 0.0084]);
+
 
 axes1.XAxis.Exponent = 0;
 
