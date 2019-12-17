@@ -77,6 +77,24 @@ ylim(subplot_phase, phase_limits);
 % Create title
 title(subplot_module, fig_title, 'Interpreter', 'latex');
 
+xtickangle(subplot_module, 75);
+xtickangle(subplot_phase, 75);
+
+
+
+
+xtick = 10.^(log10(min(freq)):log10(max(freq)));
+xticklab = cellstr(num2str(round(log10(xtick(:))), '10^{%d}'));
+set(subplot_module, 'XTick', xtick, 'XTickLabel', xticklab, ...
+    'TickLabelInterpreter', 'tex')
+
+set(subplot_phase, 'XTick', xtick, 'XTickLabel', xticklab, ...
+    'TickLabelInterpreter', 'tex')
+
+
+
+
+
 
 
 phase_angle = unwrap(angle(complex_response));

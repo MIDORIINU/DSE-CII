@@ -58,6 +58,8 @@ xlim(subplot1, freq_limits);
 ylim(subplot1,'manual');
 ylim(subplot1, mod_limits);
 
+xtickangle(ax, 75);
+
 % Create subplot
 subplot2 = subplot(2, 1, 2, 'Parent', figure_handle);
 
@@ -83,6 +85,10 @@ xlim(subplot2, freq_limits);
 
 ylim(subplot2,'manual');
 ylim(subplot2, phase_limits);
+
+xtickangle(subplot1, 75);
+
+xtickangle(subplot2, 75);
 
 
 %Agrego datatips customizados.

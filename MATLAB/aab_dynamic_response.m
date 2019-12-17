@@ -39,6 +39,9 @@ ylabel(subplot1, strjoin({'Tensi\''{o}n de entrada ',...
 % Create xlabel
 xlabel(subplot1, 'Tiempo [S]');
 
+xtickangle(subplot1, 75);
+
+
 % Create title
 title(subplot1, fig_title, 'Interpreter', 'latex');
 
@@ -91,6 +94,8 @@ xlim(subplot2,time_limits);
 
 ylim(subplot2,'manual');
 ylim(subplot2,vout_limits);
+
+xtickangle(subplot2, 75);
 
 
 

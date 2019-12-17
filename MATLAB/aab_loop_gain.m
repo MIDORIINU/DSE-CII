@@ -75,6 +75,11 @@ ylim(subplot_phase,'manual');
 ylim(subplot_phase, phase_limits);
 
 
+xtickangle(subplot_module, 75);
+
+xtickangle(subplot_phase, 75);
+
+
 % Create title
 title(subplot_module, fig_title, 'Interpreter', 'latex');
 
