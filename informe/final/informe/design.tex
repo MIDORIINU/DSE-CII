@@ -1,0 +1,86 @@
+\subsection{Circuito Pre-amplificador}
+
+\par El circuito pre-amplificador consta de un integrado TL072 con una configuración de realimentación paralelo-serie, que tiene como fin, amplificar la señal de entrada para ser tratada mediante los filtros siguientes al capacitor C12.\\
+
+\par Los filtros tienen como fin disminuir el volumen de las frecuencias bajas o altas a modo de incluir una etapa de procesamiento de señal al proyecto. Esto se logra con los potenciómetros incluidos en la placa, para que el procesamiento sea de fácil manejo.\\
+
+\par Por último, se utiliza un divisor resistivo para controlar el volumen del amplificador en conjunto.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=.7]{img/circuito/pre_amplificador.PNG}
+    \caption{Circuito pre-amplificador}
+    \label{fig:ciruito_pre}
+\end{figure}
+
+\subsection{Fuente \textit{Switching}}
+
+\par El circuito amplificador se alimenta con 4 tensiones diferentes, las cuales son $+35V$, $+15V$, $-35V$ y $-15V$, para ello se diseñaron dos fuentes switching, una \textit{step down} para bajar de $35V$ a $15V$ y una \textit{step up} para subir de $-35V$ a $-15V$.\\
+
+\par A partir de las hojas de datos de los reguladores \textbf{LM2576} y \textbf{LM2577}, en configuraciones indicadas para entregar las alimentaciones correspondientes. Se implementaron los siguientes circuitos tomados de las hojas de datos:\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.48]{img/fuente/fuente_kicad_down.png}
+    \caption{Circuito \textit{Step Down}}
+    \label{fig:step_down}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/fuente/fuente_kicad_up.png}
+    \caption{Circuito \textit{Step Up}}
+    \label{fig:step_up}
+\end{figure}
+
+\par Luego se diseñó el PCB de la fuente Switching en \textit{Kicad} a partir de los circuitos mencionados, el resultado se puede observar a continuación:\\
+
+
+\begin{figure}[H]
+ \centering
+    \includegraphics[scale=.38]{img/fuente/fuente_switching.PNG}
+ \caption{PCB de la fuente Switching}
+      \label{fig:fuente_PCB}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+    \includegraphics[scale=.52]{img/fuente/fuente_switching_3D.PNG}
+    \caption{Vista 3D de la fuente Switching}
+     \label{fig:fuente_3D}
+     \end{figure}
+
+\subsection{Circuito amplificador}
+
+
+\par A continuación, se muestran el esquemático del circuito implementado en \textit{Kicad}. En primer lugar, en la figura \ref{fig::ampli_kicad} muestra el amplificador principal clase G diseñado junto con el circuito de pre-amplificador. Luego se prosiguió por realizar el diseño del PCB. Para ello se aplicó un plano de masa en la capa superior de la placa. Por otro lado se utilizaron pistan anchas y cortas, de un espesor de 60 a 118 mils, y separaciones entre pistas mayores a 12 mils. A continuación se muestran imágenes del PCB para el amplificador clase G a implementar:\\
+
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.27]{img/circuito/kicad.png}
+        \caption{Esquemático de amplificador con clase G}
+        \label{fig::ampli_kicad}
+\end{figure}
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{img/circuito/PCB1.jpeg}
+        \caption{PCB del amplificador}
+        \label{fig::amp_PCB1}
+\end{figure}
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.32]{img/circuito/PCB_3D_Top.jpeg}
+        \caption{Vista superior del PCB a implementar}
+        \label{fig::PCB_3D_T}
+\end{figure}
+
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.35]{img/circuito/PCB_3D_Bot.jpeg}
+        \caption{Vista inferior del PCB a implementar}
+        \label{fig::PCB_3D_B}
+\end{figure}
