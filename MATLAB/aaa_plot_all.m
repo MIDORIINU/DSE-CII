@@ -53,8 +53,10 @@ G_power_BW(spice_directory, fullfile('simulaciones', 'BW'), ... % Check.
 G_low_power_BW(spice_directory, fullfile('simulaciones', 'BW'), ... % Check.
     images_directory, false);
 
-G_step_big_signal(spice_directory, fullfile('simulaciones', 'Slew_Rate'), ... % Check.
+G_Slew_Rate(spice_directory, fullfile('simulaciones', 'Slew_Rate'), ... % Check.
     images_directory, false);
+
+close all;
 
 
 
