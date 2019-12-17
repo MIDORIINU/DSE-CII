@@ -5,10 +5,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Proyecto de diseño de circuitos electrónicos"
-Date "2019-07-14"
-Rev "1.1"
-Comp "FIUBA"
+Title ""
+Date ""
+Rev ""
+Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -675,8 +675,6 @@ F 3 "~" H 6000 4200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6000 4350 6000 4400
-Wire Wire Line
 	7000 3750 7150 3750
 Wire Wire Line
 	7150 3750 7150 3900
@@ -701,14 +699,9 @@ Wire Wire Line
 Wire Wire Line
 	6000 3950 6000 4050
 Wire Wire Line
-	6000 4400 5100 4400
-Wire Wire Line
 	5100 4400 5100 3850
 Wire Wire Line
 	5100 3850 4450 3850
-Connection ~ 6000 4400
-Wire Wire Line
-	6000 4400 6000 4600
 $Comp
 L Device:R R16
 U 1 1 5D0B8B1F
@@ -1117,7 +1110,7 @@ U 1 1 5D07BC21
 P 5500 3450
 F 0 "RV2" H 5431 3496 50  0000 R CNN
 F 1 "R_POT 2k" H 5431 3405 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_ACP_CA6-H2,5_Horizontal" H 5500 3450 50  0001 C CNN
+F 2 "Kicad-extra:Potentiometer_ACP_CA6-H2,5_Horizontal_BELOW_W3DM" H 5500 3450 50  0001 C CNN
 F 3 "~" H 5500 3450 50  0001 C CNN
 	1    5500 3450
 	1    0    0    -1  
@@ -1165,7 +1158,7 @@ U 1 1 5D0A1B21
 P 3950 3500
 F 0 "RV1" H 3881 3546 50  0000 R CNN
 F 1 "R_POT (1k)" H 3881 3455 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_ACP_CA6-H2,5_Horizontal" H 3950 3500 50  0001 C CNN
+F 2 "Kicad-extra:Potentiometer_ACP_CA6-H2,5_Horizontal_BELOW_W3DM" H 3950 3500 50  0001 C CNN
 F 3 "~" H 3950 3500 50  0001 C CNN
 	1    3950 3500
 	1    0    0    -1  
@@ -1231,7 +1224,7 @@ U 1 1 5D0A8423
 P 8800 3300
 F 0 "J2" H 8880 3292 50  0000 L CNN
 F 1 "Screw_Terminal_01x02" H 8880 3201 50  0000 L CNN
-F 2 "Kicad-extra:TerminalBlock_bornier-2_P5.08mm_W3DM" H 8800 3300 50  0001 C CNN
+F 2 "Kicad-extra:TerminalBlock_bornier-2_P5.08mm_BELOW_W3DM" H 8800 3300 50  0001 C CNN
 F 3 "~" H 8800 3300 50  0001 C CNN
 	1    8800 3300
 	1    0    0    -1  
@@ -1581,13 +1574,13 @@ Wire Wire Line
 Wire Wire Line
 	3000 6000 3000 6500
 $Comp
-L Amplifier_Operational:NE5532 U1
+L Amplifier_Operational:LMH6609MA U1
 U 1 1 5D17A951
 P 2700 6000
 F 0 "U1" H 3044 6046 50  0000 L CNN
-F 1 "NE5532" H 3044 5955 50  0000 L CNN
-F 2 "Kicad-extra:DIP-8_W7.62mm_W3DM" H 2600 5800 50  0001 L CNN
-F 3 "NE5532" H 2850 6150 50  0001 C CNN
+F 1 "LMH6609MA" H 3044 5955 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2600 5800 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmh6609.pdf" H 2850 6150 50  0001 C CNN
 	1    2700 6000
 	1    0    0    -1  
 $EndComp
@@ -1870,7 +1863,7 @@ U 1 1 5D127729
 P 10050 3050
 F 0 "Jack4" H 9820 3008 50  0000 R CNN
 F 1 "+15" H 9820 3099 50  0000 R CNN
-F 2 "Kicad-extra:BarrelJack_Horizontal_W3DM" H 10100 3010 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 10100 3010 50  0001 C CNN
 F 3 "~" H 10100 3010 50  0001 C CNN
 	1    10050 3050
 	-1   0    0    1   
@@ -1881,7 +1874,7 @@ U 1 1 5D128CCC
 P 10050 3500
 F 0 "Jack5" H 9820 3550 50  0000 R CNN
 F 1 "-15" H 9820 3459 50  0000 R CNN
-F 2 "Kicad-extra:BarrelJack_Horizontal_W3DM" H 10100 3460 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 10100 3460 50  0001 C CNN
 F 3 "~" H 10100 3460 50  0001 C CNN
 	1    10050 3500
 	-1   0    0    -1  
@@ -1907,7 +1900,7 @@ U 1 1 5D0F3E4A
 P 10800 3450
 F 0 "Jack7" H 10570 3500 50  0000 R CNN
 F 1 "-30" H 10570 3409 50  0000 R CNN
-F 2 "Kicad-extra:BarrelJack_Horizontal_W3DM" H 10850 3410 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 10850 3410 50  0001 C CNN
 F 3 "~" H 10850 3410 50  0001 C CNN
 	1    10800 3450
 	-1   0    0    -1  
@@ -1918,7 +1911,7 @@ U 1 1 5D0F2C20
 P 10800 3050
 F 0 "Jack6" H 10570 3008 50  0000 R CNN
 F 1 "+30" H 10570 3099 50  0000 R CNN
-F 2 "Kicad-extra:BarrelJack_Horizontal_W3DM" H 10850 3010 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 10850 3010 50  0001 C CNN
 F 3 "~" H 10850 3010 50  0001 C CNN
 	1    10800 3050
 	-1   0    0    1   
@@ -2060,4 +2053,11 @@ Wire Wire Line
 Connection ~ 6600 3950
 Wire Wire Line
 	6600 3950 6700 3950
+Connection ~ 6000 4400
+Wire Wire Line
+	6000 4400 6000 4600
+Wire Wire Line
+	6000 4350 6000 4400
+Wire Wire Line
+	6000 4400 5100 4400
 $EndSCHEMATC
