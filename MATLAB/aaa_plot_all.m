@@ -47,10 +47,10 @@ G_Zo(spice_directory, fullfile('simulaciones', 'Impedance'), ... % Check.
 G_phase_margin(spice_directory, fullfile('simulaciones', 'Loop'), ... % Check.
     images_directory, false);
 
-G_power_BW(spice_directory, fullfile('simulaciones', 'BW'), ... % Check.
+G_power_BW_sim(spice_directory, fullfile('simulaciones', 'BW'), ... % Check.
     images_directory, false);
 
-G_low_power_BW(spice_directory, fullfile('simulaciones', 'BW'), ... % Check.
+G_low_power_BW_sim(spice_directory, fullfile('simulaciones', 'BW'), ... % Check.
     images_directory, false);
 
 G_Slew_Rate(spice_directory, fullfile('simulaciones', 'Slew_Rate'), ... % Check.
