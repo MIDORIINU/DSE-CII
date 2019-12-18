@@ -1,0 +1,10 @@
+ %%%%%%%% OBSERVACIONES %%%%%%%%%%%%%%%
+ 
+ 
+Se afrontaron diversas inconvenientes y problemas que fueron surgiendo a lo largo de la implementación del amplificador. Entre ellas, hubieron fallas en soldaduras, que concluyeron con el cambio de los transistores de potencia en más de una ocasión. \\
+
+
+Por otro lado, se debieron colocar capacitores de $220\si[per-mode=symbol]{\pico\farad}$ entre base y colector de los \textit{drivers} de los transistores de potencia para eliminar oscilaciones de alta frecuencia, estas oscilaciones no eran debidas a falta de compensación lineal, ya que las mismas solo se producían en uno de los ciclos de las señales y su intensidad y frecuencia eran distintas, dependiendo de si se trataba del semi-ciclo positivo o el negativo, de esto se concluyó que se trataba de inestabilidades alinéales y su solución con un capacitor entre base y colector de los drivers de los Darlington de salida pasa por disminuir la ganancia de los mismos a medida que la frecuencia aumenta, eliminando la posibilidad de realimentación positiva, su valor se determinó en forma empírica, y tratando de usar los valores menores posibles, ya que las simulaciones mostraban que el THD aumentaba en proporción a los valores de estos capacitores.\\
+
+
+Luego, se debió fijar otro disipador al ya colocado, ya que la resistencia térmica necesaria para este trabajo no correspondía con la adquirida en el local.
