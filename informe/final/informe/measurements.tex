@@ -1,5 +1,7 @@
 \subsection{Instrumental}
 
+\label{sec:instrumentos}
+
 Para las mediciones durante la validación del prototipo, se utilizó el instrumental provisto por la facultad en sus laboratorios. \\
 
 Se utilizó para alimentar nuestro prototipo en todas las mediciones un par de fuentes de alimentación tipo \textit{M10SP3010E}, que es una fuente de $\pm 30 \si[per-mode=symbol]{\volt}$ como máximo, $10 \si[per-mode=symbol]{\ampere}$ de corriente máxima y limitación de corriente ajustable, la misma puede verse en la figura~\figref{fig:power_supply_lab}. La fuente mencionada fue complementada con un par de fuentes switching de $\pm 10 \si[per-mode=symbol]{\volt}$, armadas conectando de a pares $\num 4$ fuentes de $\pm 5 \si[per-mode=symbol]{\volt}$ y $4 \si[per-mode=symbol]{\ampere}$ de corriente máxima, para llegar a los $\pm 35 \si[per-mode=symbol]{\volt}$ requeridos por nuestro prototipo.
@@ -79,6 +81,9 @@ Finalmente durante el armado y testeo de la fuente switching que se diseño para
 
 
 \subsubsection{Polarización}
+
+
+Para las mediciones de la polarización se utilizó solo el multímetro digital antes mencionado, figura~\figref{fig:multimeter_lab}, no fue necesario otro instrumental para esta parte, las corrientes se midieron usando las caídas en resistores y abriendo el circuito cuando ello era posible.\\
 
 Se realizaron las mediciones de punto de polarización del amplificador sin señal aplicada, obteniéndose los resultados del cuadro~\tableref{tab:PuntoQ1}. Los mismos se verificaron con y sin la carga conectada para observar que no haya cambios en la polarización, una vez ajustada la corriente de polarización de salida, para este primer caso se ajustó la corriente de los transistores de salida en aproximadamente $190 \si[per-mode=symbol]{\milli\ampere}$. El segundo caso medido se muestra en el cuadro~\tableref{tab:PuntoQ2}, en este caso se ajusto la corriente al máximo que permite el preset del multiplicador de $V_{BE}$, aproximadamente $700 \si[per-mode=symbol]{\milli\ampere}$, como puede observarse en este caso la potencia disipada en reposo es considerable, unos $22 \si[per-mode=symbol]{\watt}$, pero puede verse como las primeras etapas prácticamente no se ven afectadas por el cambio en la corriente de reposo de los transistores de salida.
 
@@ -237,9 +242,21 @@ Se realizaron las mediciones de punto de polarización del amplificador sin señ
 
 \subsubsection{Ancho de banda}
 
-\par Para la medición del ancho de banda, se buscaron las frecuencias de corte para una señal tal que sea alrededor del $10 \si[per-mode=symbol]{\percent}$ o $15 \si[per-mode=symbol]{\percent}$ de la potencia máxima de $40 \si[per-mode=symbol]{\watt}$ especificada. Por lo tanto, se obtiene que la tensión de salida deberá tener un valor de $v_{out} = 8.9 \si[per-mode=symbol]{\volt}$, y las frecuencias de corte se determinaran cuando $v_{out} \approx 8.48 \si[per-mode=symbol]{\volt}$.
+Se armó para la medición, el banco de medición mostrado en la figura~\figref{fig:banco_BW}, usando los instrumentos detallados en la sección~\sectref{sec:instrumentos}.
 
-\par Se pueden observar los resultados de la medición en el cuadro ~\tableref{tab:BW_low_power}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.8 \textwidth]{./img/bancos/banco_BW.png}
+    \caption{Banco de medición para el ancho de banda.}
+    \label{fig:banco_BW}
+\end{figure}
+
+
+
+Para la medición del ancho de banda, se buscaron las frecuencias de corte para una señal tal que sea alrededor del $10 \si[per-mode=symbol]{\percent}$ o $15 \si[per-mode=symbol]{\percent}$ de la potencia máxima de $40 \si[per-mode=symbol]{\watt}$ especificada. Por lo tanto, se obtiene que la tensión de salida deberá tener un valor de $v_{out} = 8.9 \si[per-mode=symbol]{\volt}$, y las frecuencias de corte se determinaran cuando $v_{out} \approx 8.48 \si[per-mode=symbol]{\volt}$.
+
+Se pueden observar los resultados de la medición en el cuadro ~\tableref{tab:BW_low_power}.
 
 
 \begin{table}[H]  %%\centering
@@ -291,7 +308,7 @@ Se realizaron las mediciones de punto de polarización del amplificador sin señ
 
 
 
-\par En el cuadro~\tableref{tab:comp_BW_low_power} se comparan los ancho de banda obtenidos por simulación, los medidos y los especificados:
+En el cuadro~\tableref{tab:comp_BW_low_power} se comparan los ancho de banda obtenidos por simulación, los medidos y los especificados:
 
 
 
@@ -329,47 +346,50 @@ Se realizaron las mediciones de punto de polarización del amplificador sin señ
 \end{table}
 
 
+\vfill
+\clearpage
 
 
 
-
-
-
-
-
-
-
-
-\par En la figura ~\figref{fig:BW_low_power_fl} se muestra la medición para el valor de $f_{l}$ para baja potencia, y en las figuras ~\figref{fig:BW_low_power_fl_phase} y ~\figref{fig:BW_low_power_fh_phase}, se muestran las mediciones para el cálculo de la fase de corrimiento de las señales.
+En la figura ~\figref{fig:BW_low_power_fl} se muestra la medición para el valor de $f_{l}$ para baja potencia, y en las figuras ~\figref{fig:BW_low_power_fl_phase} y ~\figref{fig:BW_low_power_fh_phase}, se muestran las mediciones para el cálculo de la fase de corrimiento de las señales.
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.75]{./img/mediciones/BW_low_power/1.png}
+    \includegraphics[width=0.95 \textwidth]{./img/mediciones/BW_low_power/1.png}
     \caption{Medición de $f_{l}$ a baja potencia, mostrando el corrimiento de fase.}
     \label{fig:BW_low_power_fl}
 \end{figure}
 
+
+\vfill
+\clearpage
+
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.75]{./img/mediciones/BW_low_power/3.png}
+    \includegraphics[width=0.95 \textwidth]{./img/mediciones/BW_low_power/3.png}
     \caption{Cálculo del corrimiento de fase para $f_{l}$ a baja potencia.}
     \label{fig:BW_low_power_fl_phase}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.75]{./img/mediciones/BW_low_power/4.png}
+    \includegraphics[width=0.95 \textwidth]{./img/mediciones/BW_low_power/4.png}
     \caption{Cálculo del corrimiento de fase para $f_{h}$ a baja potencia.}
     \label{fig:BW_low_power_fh_phase}
 \end{figure}
 
+\vfill
+\clearpage
 
 
 \subsubsection{Ancho de banda de potencia}
 
-\par Para el caso del ancho de banda de potencia, se repite el procedimiento de la sección anterior pero con una señal de salida $V_{out} = 25.3 \si[per-mode=symbol]{\volt}$ a máxima potencia ($40 \si[per-mode=symbol]{\watt}$). En este caso, las frecuencias de corte se determinan cuando $V_{out} = 24 \si[per-mode=symbol]{\volt}$, tomando como en el caso anterior las frecuencias de corte al $10 \si[per-mode=symbol]{\percent}$.
-\par Se pueden observar los resultados de la medición en el cuadro ~\tableref{tab:BW_power}.
+Se usó para la medición, el banco de medición de la medición anterior, mostrado en la figura~\figref{fig:banco_BW}, usando los instrumentos detallados en la sección~\sectref{sec:instrumentos}.
+
+
+ Para el caso del ancho de banda de potencia, se repite el procedimiento de la sección anterior pero con una señal de salida $V_{out} = 25.3 \si[per-mode=symbol]{\volt}$ a máxima potencia ($40 \si[per-mode=symbol]{\watt}$). En este caso, las frecuencias de corte se determinan cuando $V_{out} = 24 \si[per-mode=symbol]{\volt}$, tomando como en el caso anterior las frecuencias de corte al $10 \si[per-mode=symbol]{\percent}$.\\
+Se pueden observar los resultados de la medición en el cuadro ~\tableref{tab:BW_power}.
 
 
 \begin{table}[H]  %%\centering
@@ -415,7 +435,7 @@ Se realizaron las mediciones de punto de polarización del amplificador sin señ
 
 
 
-\par En el cuadro ~\tableref{tab:comp_BW_power} se comparan los anchos de banda obtenidos por simulación, los medidos y los especificados:
+En el cuadro ~\tableref{tab:comp_BW_power} se comparan los anchos de banda obtenidos por simulación, los medidos y los especificados:
 
 
 
@@ -454,13 +474,16 @@ Se realizaron las mediciones de punto de polarización del amplificador sin señ
 
 
 
-\par En las figura~\figref{fig:BW_power_fl_phase} y la figura~\figref{fig:BW_power_fh_phase}, se muestran las mediciones para el cálculo de la fase de corrimiento de las señales.
+En las figura~\figref{fig:BW_power_fl_phase} y la figura~\figref{fig:BW_power_fh_phase}, se muestran las mediciones para el cálculo de la fase de corrimiento de las señales.
 
+
+\vfill
+\clearpage
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.75]{./img/mediciones/BW_power/3.png}
+    \includegraphics[width=0.95 \textwidth]{./img/mediciones/BW_power/3.png}
     \caption{Medición de $f_l$ a máxima potencia, mostrando el corrimiento de fase.}
     \label{fig:BW_power_fl_phase}
 \end{figure}
@@ -468,29 +491,47 @@ Se realizaron las mediciones de punto de polarización del amplificador sin señ
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.75]{./img/mediciones/BW_power/4.png}
+    \includegraphics[width=0.95 \textwidth]{./img/mediciones/BW_power/4.png}
     \caption{Medición de $f_l$ a máxima potencia, mostrando el corrimiento de fase.}
     \label{fig:BW_power_fh_phase}
 \end{figure}
 
 
 
+\vfill
+\clearpage
 
 
 \subsubsection{Impedancias de entrada y salida}
 
-\par Para la impedancia de entrada, se colocó en serie con el generador, un resistor variable. El mismo fue ajustado de forma tal que la tensión de salida fijada por el generador, disminuya a la mitad a la entrada del amplificador. El método se realizó para $\num 3$ frecuencias distintas ( $100 \si[per-mode=symbol]{\hertz}$, $1 \si[per-mode=symbol]{\kilo\hertz}$ y  $10 \si[per-mode=symbol]{\kilo\hertz}$), obteniéndose de este modo $z_{in} = 21.56\si[per-mode=symbol]{\kilo\ohm}$ para las tres mediciones.\\
+Se armó para la primer medición, el banco de medición mostrado en la figura~\figref{fig:banco_Ri}, usando los instrumentos detallados en la sección~\sectref{sec:instrumentos} y para la segunda medición se utilizó únicamente el multímetro \textit{true-rms}, figura~\figref{fig:multimeter_lab}.
 
-\par Para el caso de la resistencia de salida, se determina su valor midiendo la tensión dos veces, una en vacío ($V_{out}$) y otra con carga nominal ($V_c$), a una frecuencia de $1 \si[per-mode=symbol]{\kilo\hertz}$ y una amplitud tal que permita obtener la lectura de mayor resolución posible en el voltímetro utilizado. Luego, la impedancia de salida se calcula mediante la ecuación~\eqref{eq:z_out}:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width= 0.8 \textwidth]{./img/bancos/banco_Ri.png}
+    \caption{Banco de medición para el ancho de banda.}
+    \label{fig:banco_Ri}
+\end{figure}
+
+
+
+
+
+
+
+Para la impedancia de entrada, se colocó en serie con el generador, un resistor variable. El mismo fue ajustado de forma tal que la tensión de salida fijada por el generador, disminuya a la mitad a la entrada del amplificador. El método se realizó para $\num 3$ frecuencias distintas ( $100 \si[per-mode=symbol]{\hertz}$, $1 \si[per-mode=symbol]{\kilo\hertz}$ y  $10 \si[per-mode=symbol]{\kilo\hertz}$), obteniéndose de este modo $z_{in} = 21.56\si[per-mode=symbol]{\kilo\ohm}$ para las tres mediciones.\\
+
+Para el caso de la resistencia de salida, se determina su valor midiendo la tensión dos veces, una en vacío ($V_{out}$) y otra con carga nominal ($V_c$), a una frecuencia de $1 \si[per-mode=symbol]{\kilo\hertz}$ y una amplitud tal que permita obtener la lectura de mayor resolución posible en el voltímetro utilizado. Luego, la impedancia de salida se calcula mediante la ecuación~\eqref{eq:z_out}:
 
 \begin{equation}
     z_{out} = R_c \cdot \left( \frac{V_{out}}{V_c}-1 \right)
     \label{eq:z_out}
 \end{equation}
 
-\par Los valores obtenidos fueron $V_{out} = 17.57 \si[per-mode=symbol]{\volt}$, $V_c= 17.39 \si[per-mode=symbol]{\volt}$ con $R_c = 6.58\si[per-mode=symbol]{\ohm}$, obteniéndose como resultado $z_{out} = 68.10\si[per-mode=symbol]{\milli\ohm}$.\\
+Los valores obtenidos fueron $V_{out} = 17.57 \si[per-mode=symbol]{\volt}$, $V_c= 17.39 \si[per-mode=symbol]{\volt}$ con $R_c = 6.58\si[per-mode=symbol]{\ohm}$, obteniéndose como resultado $z_{out} = 68.10\si[per-mode=symbol]{\milli\ohm}$.\\
 
-\par Se muestra en el cuadro ~\tableref{tab:comp_impedance} la comparación para los distintos valores de impedancia obtenidos a $1 \si[per-mode=symbol]{\kilo\hertz}$:
+Se muestra en el cuadro ~\tableref{tab:comp_impedance} la comparación para los distintos valores de impedancia obtenidos a $1 \si[per-mode=symbol]{\kilo\hertz}$:
 
 
 \begin{table}[H]  %%\centering
@@ -526,17 +567,18 @@ Se realizaron las mediciones de punto de polarización del amplificador sin señ
 	\end{center}
 \end{table}
 
-Una cosa a destacar de esta medición, es que su precisión se vio afectada por la precisión del voltímetro con el que se disponía, y que además en el caso de la impedancia de entrada se trata prácticamente de una resistencia en todo el ancho de banda, solo afectada a bajas frecuencias por el acople capacitivo, pero la impedancia de salida, tal como se vio en las simulaciones tiene el desfasaje de una inductancia, el cual no se tiene en cuenta en el método de medición, que toma solo valores eficaces de las tensiones.
+Una cosa a destacar de esta medición, es que su precisión se vio afectada por la precisión del voltímetro con el que se disponía, y que además en el caso de la impedancia de entrada se trata prácticamente de una resistencia en todo el ancho de banda, solo afectada a bajas frecuencias por el acople capacitivo, pero la impedancia de salida, tal como se vio en las simulaciones tiene el desfasaje de una inductancia, el cual no se tiene en cuenta en el método de medición, que toma solo los valores eficaces de las tensiones.
 
 
 
 \subsubsection{Sensibilidad}
 
-\par Se midió el valor eficaz de una señal senoidal de 1kHz aplicada a la entrada $v_{in}=1.08 \si[per-mode=symbol]{\volt}$, que produce la potencia especificada a la salida con carga nominal, siendo esta última $v_{out}= 25.2 \si[per-mode=symbol]{\volt}$. Se verifica dicha medición en la figura ~\figref{fig:Sensitivity}.
+Ya que la red de realimentación de nuestro amplificador está formada por un resistor fijo y un preset, la sensibilidad es ajustable en cierto rango, por lo tanto, la misma se ajustó para obtener lo que se especificó en el diseño, una sensibilidad de $1 \si[per-mode=symbol]{\volt}$. \\
+Para verificar esto, se midió el valor eficaz de una señal senoidal de $1 \si[per-mode=symbol]{\kilo\hertz}$ aplicada a la entrada $v_{in}=1.08 \si[per-mode=symbol]{\volt}$, que produce la potencia especificada a la salida con carga nominal, siendo esta última $v_{out}= 25.3 \si[per-mode=symbol]{\volt}$. Se verifica dicha medición en la figura ~\figref{fig:Sensitivity}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.75]{./img/mediciones/Sensitivity/1.png}
+    \includegraphics[width=0.95 \textwidth]{./img/mediciones/Sensitivity/1.png}
     \caption{Medición de la sensibilidad del circuito amplificador.}
     \label{fig:Sensitivity}
 \end{figure}
@@ -546,38 +588,38 @@ Una cosa a destacar de esta medición, es que su precisión se vio afectada por 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[angle=90,scale=0.45]{img/mediciones/THD/THD_vs_frequency.png}
+    \includegraphics[width=0.95 \textwidth, angle=90]{img/mediciones/THD/THD_vs_frequency.png}
     \caption{Medición del THD en función de la frecuencia.}
     \label{fig:Sensitivity}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[angle=90,scale=0.45]{img/simulaciones/THD/THD_vs_power_sim.png}
+    \includegraphics[width=0.95 \textwidth, angle=90]{img/simulaciones/THD/THD_vs_power_sim.png}
     \caption{Medición del THD en función de la potencia.}
     \label{fig:Sensitivity}
 \end{figure}
 
 \subsubsection{Slew Rate}
 
-\par Se aplicó una señal cuadrada de máxima potencia a modo de obtener el valor numérico del SR, calculando la pendiente de la recta obtenida en la figura~\figref{fig:Slew_rate_amplifier}. Antes, se verficó en la figura  ~\figref{fig:Slew_rate_gen} que el tiempo de crecimiento de la fuente generadora de señal sea lo suficientemente baja para poder garantizar una correcta medición, siendo este tiempo de $\tau = 264 \si[per-mode=symbol]{\nano\second}$.
+Se aplicó una señal cuadrada de máxima potencia a modo de obtener el valor numérico del SR, calculando la pendiente de la recta obtenida en la figura~\figref{fig:Slew_rate_amplifier}. Antes, se verficó en la figura  ~\figref{fig:Slew_rate_gen} que el tiempo de crecimiento de la fuente generadora de señal sea lo suficientemente baja para poder garantizar una correcta medición, siendo este tiempo de $\tau = 264 \si[per-mode=symbol]{\nano\second}$.
 
 
 \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.75]{./img/mediciones/Slew_Rate/1.png}
+        \includegraphics[width=0.95 \textwidth]{./img/mediciones/Slew_Rate/1.png}
         \caption{Verificación de tiempo de crecimiento del generador.}
         \label{fig:Slew_rate_gen}
 \end{figure}
 
 \begin{figure}[H]
         \centering
-        \includegraphics[scale=0.75]{./img/mediciones/Slew_Rate/2.png}
+        \includegraphics[width=0.95 \textwidth]{./img/mediciones/Slew_Rate/2.png}
         \caption{Medición del Slew Rate del circuito amplificador.}
         \label{fig:Slew_rate_amplifier}
 \end{figure}
 
-\par Mediante el cálculo pertinente, y comparando con las simulaciones, se obtiene el cuadro comparativo  ~\tableref{tab:comp_SlewRate}:
+Mediante el cálculo pertinente, y comparando con las simulaciones, se obtiene el cuadro comparativo  ~\tableref{tab:comp_SlewRate}:
 
 
 
