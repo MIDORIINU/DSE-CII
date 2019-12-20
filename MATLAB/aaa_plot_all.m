@@ -56,6 +56,10 @@ G_low_power_BW_sim(spice_directory, fullfile('simulaciones', 'BW'), ... % Check.
 G_Slew_Rate(spice_directory, fullfile('simulaciones', 'Slew_Rate'), ... % Check.
     images_directory, false);
 
+G_eff_vs_Power(spice_directory, ... % Check.
+    fullfile('simulaciones', 'Efficiency'), ...
+    images_directory, false);
+
 close all;
 
 

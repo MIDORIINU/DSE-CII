@@ -664,6 +664,8 @@ En esta medición se midió las señales presentes en los colectores de los tran
 
 \subsubsection{THD}
 
+\label{THD_vs_power}
+
 Se armó para la medición, el banco de medición mostrado en la figura~\figref{fig:banco_THD}, usando los instrumentos detallados en la sección~\sectref{sec:instrumentos} y un atenuador formado con un resistor de $3.3 \si[per-mode=symbol]{\kilo\ohm}$ y un preset de $500 \si[per-mode=symbol]{\ohm}$, de manera de poder atenuar desde el valor de máxima excursión a máxima potencia, $25.3 \si[per-mode=symbol]{\volt}$, a un valor menor a $1 \si[per-mode=symbol]{\volt}$, necesario para ingresar por la entrada de línea de la placa de sonido de la PC en forma segura, los valores también se seleccionaron de manera de no cargar al amplificador, ya que el valor $3.3 \si[per-mode=symbol]{\kilo\ohm}$ es despreciable frente a los $8 \si[per-mode=symbol]{\ohm}$ de la carga. El multímetro se usó para verificar la atenuación, luego se retiró al medir el THD.
 
 
@@ -914,3 +916,24 @@ Se midió la temperatura del disipador con el multímetro para el caso de máxim
 \end{table}
 
 
+\vfill
+
+\clearpage
+
+
+\subsubsection{Eficiencia}
+
+Para está medición el banco de medición utilizado es el mismo que en la sección~\sectref{THD_vs_power}, para la medición del THD en función de la potencia de salida, de hecho la medición se relevó simultáneamente, ya que se pretendía la eficiencia en los mismos pasos de $ 1 \si[per-mode=symbol]{\watt} $, simplemente se tomo la medición de corriente tomada por las fuentes de alimentación para cada punto y se calculó la potencia entregada por las mismas, con una señal de $ 1 \si[per-mode=symbol]{\kilo\hertz} $ de entrada, en la figura~\figref{fig:efficiency} se observa el gráfico obtenido de estos valores.\\
+
+
+\vfill
+
+\clearpage
+
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[height=0.65 \textwidth, angle=90]{./img/simulaciones/Efficiency/Efficiency_vs_power_sim.png}
+        \caption{Eficiencia en función de la potencia de salida.}
+        \label{fig:efficiency}
+\end{figure}
