@@ -2,13 +2,16 @@
 Repositorio de DSE/CII 2019 - 1C
 
 
-Luna Diego
-Neumarkt Fernández Leonardo
-Rizzo Gonzalo Gabriel
+* Luna Diego
+
+* Neumarkt Fernández Leonardo
+
+* Rizzo Gonzalo Gabriel
 
 
+Prototipo:
 
 ![](informe/final/informe/img/fotos/2.jpg)
 
 
-Aprobado 20/12/2019
+Aprobado 20/12/2019.
