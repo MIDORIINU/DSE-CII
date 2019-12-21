@@ -240,7 +240,7 @@ Se realizaron las mediciones de punto de polarización del amplificador sin señ
 
 
 
-\subsubsection{Ancho de banda}
+\subsubsection{Ancho de banda a baja potencia}
 
 Se armó para la medición, el banco de medición mostrado en la figura~\figref{fig:banco_BW}, usando los instrumentos detallados en la sección~\sectref{sec:instrumentos}.
 
@@ -531,7 +531,7 @@ Para el caso de la resistencia de salida, se determina su valor midiendo la tens
 
 Los valores obtenidos fueron $V_{out} = 17.57 \si[per-mode=symbol]{\volt}$, $V_c= 17.39 \si[per-mode=symbol]{\volt}$ con $R_c = 6.58\si[per-mode=symbol]{\ohm}$, obteniéndose como resultado $z_{out} = 68.10\si[per-mode=symbol]{\milli\ohm}$.\\
 
-Se muestra en el cuadro ~\tableref{tab:comp_impedance} la comparación para los distintos valores de impedancia obtenidos a $1 \si[per-mode=symbol]{\kilo\hertz}$:
+Se muestra en el cuadro ~\tableref{tab:comp_impedance} la comparación para los distintos valores de impedancia obtenidos a $1 \si[per-mode=symbol]{\kilo\hertz}$.
 
 
 \begin{table}[H]  %%\centering
@@ -562,7 +562,7 @@ Se muestra en el cuadro ~\tableref{tab:comp_impedance} la comparación para los 
     \rowcolor{gray!20} \cellcolor{gray!40} $z_{out}$ & $\approx 0$ & $0.87 \si[per-mode=symbol]{\milli\ohm}$ & $68.10 \si[per-mode=symbol]{\milli\ohm}$ \\
     \hhline{|-|-|-|-|}         
     \end{tabularx}}
-    \caption{Comparación de impedancias de entrada y salida (a 1 \si[per-mode=symbol]{\kilo\hertz})}
+    \caption{Comparación de impedancias de entrada y salida (a 1 \si[per-mode=symbol]{\kilo\hertz}).}
     \label{tab:comp_impedance}
 	\end{center}
 \end{table}
@@ -573,6 +573,69 @@ Una cosa a destacar de esta medición, es que su precisión se vio afectada por 
 
 \clearpage
 
+
+
+\subsubsection{Factor de amortiguamiento}
+
+El factor de amortiguamiento, que nos da una idea de que tan rápido el amplificador permite que el cono del parlante regrese al estado estático al terminar la señal aplicada, se calcula a partir de las impedancias de carga nominal y de la carga con la expresión \eqref{eq:DF}.
+
+
+\begin{equation}
+DF = \frac{\left| Z_{o} \right|}{\left| Z_{L} \right|}
+\label{eq:DF}
+\end{equation}
+
+Usando los valores de la impedancia de salida del amplificador obtenida en la sección anterior, se obtiene:
+
+
+\begin{equation*}
+\boxed { DF = \frac{8 \si[per-mode=symbol]{\ohm}}{68.10 \si[per-mode=symbol]{\milli\ohm}} = 117.47 }
+\end{equation*}
+
+
+
+Se muestra en el cuadro ~\tableref{tab:dumping_factor} la comparación para los valores de diseño, simulado y medido.
+
+
+\begin{table}[H]  %%\centering
+    
+    \setlength\arrayrulewidth{1.5pt}
+    \arrayrulecolor{white}
+    \def\clinecolor{\hhline{|>{\arrayrulecolor{white}}-%
+    >{\arrayrulecolor{white}}|-|-|-|-|}}
+    
+\begin{center}  
+\resizebox{0.7 \textwidth}{!}{%    
+\begin{tabularx}{1 \textwidth}%
+    {|
+    >{\columncolor{white} \centering\arraybackslash}m{0.3333\linewidth}
+     |
+    >{\columncolor{white} \centering\arraybackslash}m{0.1667\linewidth}
+     |
+    >{\columncolor{white} \centering\arraybackslash}m{0.1667\linewidth}
+     |
+    >{\columncolor{white} \centering\arraybackslash}m{0.3333\linewidth}
+     |
+    }
+    \rowcolor{HeadersColor} \thead{Valor} & \thead{Especificación} & \thead{Simulación} & \thead{Medición}\\    
+    \hhline{|-|-|-|-|}
+    %\rowcolor{Butter!20} \cellcolor{Butter!40} $I_{C}$ [$\si[per-mode=symbol]{\milli\ampere}$] & $0.54$ & $8.66$ & $9$ & $6$ & $5.5$ & $10$ & $10$  \\
+    \rowcolor{gray!20} \cellcolor{gray!40} $DF$ & $> 100$ & $9145.4$ & $117.47$ \\
+    \hhline{|-|-|-|-|}   
+       
+    \end{tabularx}}
+    \caption{Comparación del factor de amortiguamiento.}
+    \label{tab:dumping_factor}
+	\end{center}
+\end{table}
+
+
+El valor obtenido está afectado por el mismo error mencionado antes para la impedancia de salida, debido al instrumental disponible.
+
+
+\vfill
+
+\clearpage
 
 
 \subsubsection{Sensibilidad}
@@ -638,17 +701,16 @@ Para está medición el banco de medición utilizado es el mismo que en la medic
 En esta medición se midió las señales presentes en los colectores de los transistores de potencia de salida internos, para ver su forma, en la figura~\figref{fig:switch1} y en la figura~\figref{fig:switch2}, pueden verse las formas de onda para el transistor NPN y el PNP respectivamente. Las mediciones se realizaron a $1 \si[per-mode=symbol]{\kilo\hertz}$. Se observa que las formas son muy cercanas a las esperadas para ambas señales.\\
 
 
-\vfill
-
-\clearpage
-
-
 \begin{figure}[H]
         \centering
         \includegraphics[width=0.95 \textwidth]{./img/mediciones/Switching/2.jpeg}
         \caption{Forma de onda para el transistor \textit{NPN}.}
         \label{fig:switch1}
 \end{figure}
+
+\vfill
+
+\clearpage
 
 \begin{figure}[H]
         \centering
@@ -661,6 +723,40 @@ En esta medición se midió las señales presentes en los colectores de los tran
 \vfill
 
 \clearpage
+
+
+Para observar el efecto que tiene el switcheo de la etapa de salida, efecto que es mas notorio a altas frecuencias, aplicamos una señal de entrada senoidal de $20 \si[per-mode=symbol]{\kilo\hertz}$, de manera de obtener máxima potencia de salida, y observamos la misma en el osciloscopio digital, en la figura~\figref{fig:glitch_pos} se observa la salida para el semi-ciclo positivo, y en la en la figura~\figref{fig:glitch_neg} para el negativo. Se puede apreciar que el efecto de \textit{\quotemarks{glitch}} es mayor para el semiciclo negativo, ambas imágenes están en la misma escala del instrumento, esto es esperable, ya que a pesar de tratarse de pares de transistores complementarios, se espera que el transistor \textit{PNP} sea de menor performance por razones constructivas. La velocidad de switching de los transistores usados en la etapa de salida es crucial para este efecto, como pudimos comprobar en el trabajo de otros compañeros, también sobre un amplificador clase G, donde ellos usaron transistores rápidos de la marca \textit{TOSHIBA}, específicamente el par complementario \textit{2SC5200/2SA1943}, para ese amplificador el efecto del \textit{\quotemarks{glitch}} es recién aparente al alcanzar los $40 \si[per-mode=symbol]{\kilo\hertz}$, dada la mayor calidad, y costo, de esos transistores que \textit{TOSHIBA} usa en sus propios amplificadores de audio.
+
+
+
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.95 \textwidth]{./img/mediciones/Glitch/positivo.jpg}
+        \caption{\textit{\quotemarks{Glitch}} en el semiciclo positivo de la señal de salida a $20 \si[per-mode=symbol]{\kilo\hertz}$.}
+        \label{fig:glitch_pos}
+\end{figure}
+
+
+\vfill
+
+\clearpage
+
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.95 \textwidth]{./img/mediciones/Glitch/negativo.jpg}
+        \caption{\textit{\quotemarks{Glitch}} en el semiciclo negativo de la señal de salida a $20 \si[per-mode=symbol]{\kilo\hertz}$.}
+        \label{fig:glitch_neg}
+\end{figure}
+
+
+
+\vfill
+
+\clearpage
+
+
 
 \subsubsection{THD}
 
@@ -769,9 +865,42 @@ Luego de relevar el THD en función de la frecuencia, se procedió a hacer lo mi
 \clearpage
 
 
+\subsubsection{Influencia del switching de la etapa de salida sobre el THD}
+
+Esta medición se realizó sobre el amplificador clase G que fue el trabajo final de compañeros de la materia.\\
+
+
+Para observar específicamente el efecto del \textit{\quotemarks{glitch}} sobre el THD, se procedió a medir el mismo, con tensiones de salida que sean justo de antes de que se produzca el switching y luego justo después, el switcheo para este amplificador se produce alrededor de los $12 \si[per-mode=symbol]{\volt}$. En la figura~\figref{fig:THD_pre_switching} se observa lo obtenido con el programa \textit{Spectra Plus}, previo al switcheo, y en la la figura~\figref{fig:THD_pos_switching} luego del switcheo, dado que el atenuador no se tocó y la diferencia de amplitud de salida es mínima, la diferencia observada solo se puede atribuir al \textit{\quotemarks{glitch}} presente en la salida, que a esta frecuencia para este amplificador no es muy evidente, pero se puede apreciar como hay armónicos introducidos por el efecto.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95 \textwidth]{img/mediciones/THD/thd-20k-pre-18vpp.png}
+    \caption{Medición del THD sin producirse switcheo a la salida.}
+    \label{fig:THD_pre_switching}
+\end{figure}
+
+
+\vfill
+
+\clearpage
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95 \textwidth]{img/mediciones/THD/thd-20k-pos-25vpp.png}
+    \caption{Medición del THD con switcheo a la salida.}
+    \label{fig:THD_pos_switching}
+\end{figure}
+
+
+\vfill
+
+\clearpage
+
 \subsubsection{Slew Rate}
 
-Se aplicó una señal cuadrada de máxima potencia a modo de obtener el valor numérico del SR, calculando la pendiente de la recta obtenida en la figura~\figref{fig:Slew_rate_amplifier}. Antes, se verficó en la figura  ~\figref{fig:Slew_rate_gen} que el tiempo de crecimiento de la fuente generadora de señal sea lo suficientemente baja para poder garantizar una correcta medición, siendo este tiempo de $\tau = 264 \si[per-mode=symbol]{\nano\second}$.
+Se aplicó una señal cuadrada de máxima potencia a modo de obtener el valor numérico del SR, calculando la pendiente de la recta obtenida en la figura~\figref{fig:Slew_rate_amplifier}. Antes, se verificó en la figura~\figref{fig:Slew_rate_gen} que el tiempo de crecimiento de la fuente generadora de señal sea lo suficientemente baja para poder garantizar una correcta medición, siendo este tiempo de $\tau = 264 \si[per-mode=symbol]{\nano\second}$.
 
 
 \begin{figure}[H]
